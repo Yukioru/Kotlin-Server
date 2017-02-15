@@ -1,2 +1,7 @@
 # Kotlin-Server
-Example server on Kotlin (JVM)
+Тестовый сервер на Kotlin (JVM).
+
+### Пакеты
+HTTP server - wasabi
+
+JSON builder - kotson
