@@ -1,0 +1,32 @@
+group 'server'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.0.6'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://dl.bintray.com/wasabifx/wasabifx'
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.wasabifx:wasabi:0.3.120"
+    compile "com.github.salomonbrys.kotson:kotson:2.5.0"
+}
+
+sourceSets {
+    main.java.srcDirs += '/src'
+}
